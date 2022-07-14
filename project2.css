@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(163, 13, 13);
+  }
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }  
+
+.visualcard{
+    position: absolute;
+    width: 100vw;
+   
+    height: 100vw;
+    
+    margin-bottom: 20px;
+    justify-content: space-between;
+    border: 2px solid blue;
+    
+}
+
+.card{
+    position:absolute;
+     width: 50px; 
+    height: 100vh;
+    border-radius: 5px;
+    overflow: hidden;
+   
+    
+    
+    background: #5a8bd4;
+    border: 2px solid red;
+}
