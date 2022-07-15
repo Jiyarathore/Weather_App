@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="project3.css">
+</head>
+
+<body onload="updateClock(); setInterval('updateClock()',1000)">
+    <!-- setInterval matalb hr 1 sec me updateClock() run krte jaaoo
+     -->
+    <div class="container1">
+        <div id="clock"></div>
+        <button type="button" class=" blurBtn" id="btn">Weather</button>
+        <button type="button" class=" blurBtn" id="btn">Food</button>
+        <button type="button" class=" blurBtn" id="btn">Apps</button>
+        <button type="button" class=" blurBtn" id="btn">Movies</button>
+    </div>
+
+
+
+    <h1 class="title">How's it look out there?</h1>
+    <div class="temperature">
+        <div class="card-container">
+            <div class="card" id="weatherCard">
+            
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="title">Get it delivered</h1>
+    <div class="food">
+        <div class="card1-container">
+            <div class="card1">
+                <img src="burgers.png" class="card1-img" alt="" />
+                <div class="card1-body">
+                </div>
+            </div>
+            <div class="card1">
+                <img src="icecream.png" class="card1-img" alt="" />
+                <div class="card1-body">
+                </div>
+            </div>
+            <div class="card1">
+                <img src="pizza.png" class="card1-img" alt="" />
+                <div class="card1-body">
+                </div>
+            </div>
+            <div class="card1">
+                <img src="bbq.png" class="card1-img" alt="" />
+                <div class="card1-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="title">Popcorn Time!</h1>
+    <div class="movies-list">
+        <div class="card2-container">
+            <div class="card2">
+                <img src="milkyway.png" class="card2-img" alt="">
+                <div class="card2-body">
+                    <h2 class="name">Protectors of the Milky Way</h2>
+                    <h6 class="des">
+                        A tale of some people watching over a large portion of space
+                    </h6>
+                    
+                </div>
+            </div>
+            
+            <div class="card2">
+                <img src="hole.png" class="card2-img" alt="">
+                <div class="card2-body">
+                    <h2 class="name">Hole People</h2>
+                    <h6 class="des">
+                        Some people leave their holes to disrupt some things.
+                    </h6>
+                   
+                </div>
+            </div>
+            <div class="card2">
+                <img src="potofhair.png" class="card2-img" alt="">
+                <div class="card2-body">
+                    <h2 class="name">Pot of Hair</h2>
+                    <h6 class="des">
+                       A boy with a dent in his head tries to stop a bad guy. And by bad I mean bad at winning.
+                    </h6>
+                   
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="areafights.png" class="card2-img" alt="">
+                <div class="card2-body">
+                    <h2 class="name">Area Fights</h2>
+                    <h6 class="des">
+                       A long drawn out story of some people fighting over some space.Cuz there isn't enough of it.
+                    </h6>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <h1 class="title">How's it look out there?</h1>
+    <div class="temperature">
+        <div class="card-container">
+            <div class="card" id="weatherCard">
+            
+            </div>
+        </div>
+    </div> -->
+    <script src="project.js"></script>   
+</body>
+
+</html>

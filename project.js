@@ -9,7 +9,7 @@ function updateClock() {
     let currentMinutes = currentTime.getMinutes();
     let currentSeconds = currentTime.getSeconds();
     let day=currentTime.getDay();
-    let weatherCard = getElementById("weatherCard");
+    let weatherCard = document.getElementById("weatherCard");
 
     //pad 0 if minute or secind is less than 10 (single digit)
     currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
@@ -44,22 +44,55 @@ function getWeatherData() {
 }
 getWeatherData();
 
+// function unixToDate()  {
+//     const unixTime = string;
+//     const date = new Date(unixTime * 1000);
+//     const newText = date.toLocaleDateString("en-US");
+    
+//     return newText
+//   }
+
 function showWeatherData(data){
 
+    function unixToDate()  {
+        const unixTime = data.dt;
+        const date = new Date(unixTime * 1000);
+        const newText = date.toLocaleDateString("en-US");
+        
+        return newText
+      }
+
+      unixToDate();
  let DayForcast=''
  data.daily.forEach((day,index)=>{
      if(index==0){
 
      }
      else{
-        DayForcast+=` <div class="card" id="weatherCard" style="width:20rem; text-align:center; display:inline-block;">
-        <div class="temp">${day.temp.day} C</div>
-        <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" class="card-img-top" alt="...">
-        <div class="day">${day.dt}</div>
-        </div>`
+        DayForcast+=`<div class="card" id="weatherCard">
+        <img src=" http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" class="card-img-top" alt="...">
+           <div class="card-body">
+               <h2 class="temp">${day.temp.day} C</h2>
+               <h6 class="day">unixToDate${(day.dt)}.getDay()</h6>
+           </div>
+        </div> `
     }
     // <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
  })
 
  weatherCard.innerHTML=DayForcast;
 }
+/* <div class="card" id="weatherCard">
+<img src=" http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" class="card-img-top" alt="...">
+   <div class="card-body">
+       <h2 class="temp">${day.temp.day} C</h2>
+       <h6 class="day">unixToDate${(day.dt)}.getDay()</h6>
+   </div>
+</div> */
+
+{/* <div class="card1" id="weatherCard" style="width:20rem; text-align:center; display:inline-block">
+        <div class="temp">${day.temp.day} C</div>
+        <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" class="card-img-top" alt="...">
+        <div class="day">unixToDate${(day.dt)}.getDay()</div>
+        </div> */}
+
