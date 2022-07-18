@@ -1,10 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-}
-
-.de{
-    border: 2px solid green;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
 }

@@ -30,17 +30,20 @@ function showWeatherData(data) {
     };
 
     const dateToDay = {
-        0: "Sun",
-        1: "Mon",
-        2: "Tue",
-        3: "Wed",
-        4: "Thru",
-        5: "Fri",
-        6: "Sat"
+        1: "Sun",
+        2: "Mon",
+        3: "Tue",
+        4: "Wed",
+        5: "Thru",
+        6: "Fri",
+        0: "Sat"
     }
     let DayForcast = '';
     data.daily.forEach((day, index) => {
-        if (index !== 0) {
+        if (index === 0) {
+
+        }
+        else{
             DayForcast += `
                 <div class="card" id="weatherCard">
                 <img src=" http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" class="card-img-top" alt="...">

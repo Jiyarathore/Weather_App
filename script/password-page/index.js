@@ -8,12 +8,4 @@ passwordpage.addEventListener('click',()=>{
     lockScreen.classList.add("blur-effect");
     password.classList.add("show");
 
-    // let clock=document.getElementById('clock-lock');
-    // let DateDay=document.getElementById("DateDay");
-    // console.log("password",password);
-    // password.classList.add('show');
-    // clock.classList.add('hide');
-    // DateDay.classList.add('hide');
-
-
 })

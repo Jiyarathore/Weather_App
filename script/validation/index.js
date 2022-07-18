@@ -32,3 +32,4 @@ name.addEventListener('keypress', (e) => {
         mainpage();
     }
 })
+
